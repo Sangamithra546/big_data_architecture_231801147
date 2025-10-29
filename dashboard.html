@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="card upload-card">
+    <input type="file" id="file-input" accept=".csv">
+    <button id="forecast-btn">Run Forecast</button>
+    <div id="uploadMessage" class="upload-message"></div>
+</div>
+
+<div id="forecast-result" class="card mt-6">
+    <h2>Forecast Results</h2>
+    <table id="forecast-table"></table>
+</div>
+
+<div class="grid" id="charts-grid"></div>
+
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}
